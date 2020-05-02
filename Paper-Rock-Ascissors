@@ -1,0 +1,51 @@
+import random
+box=[1,3,2]
+print("-----------------------------\npaper: 1 , scissors: 2 , rock: 3")
+guess=input("|>")
+sysguess=random.sample(box,1)
+c1=0
+c2=0
+while c2<3 or c1<3:
+    if sysguess==[1] and guess==2:
+        print"------------------------>human\nhuman: ",guess," |system: ",sysguess
+        c2=c2+1
+        print"|Points:--------\nhuman: ",c2," |system: ",c1
+    elif sysguess==[1] and guess==3:
+        print"------------------------>system\nhuman: ",guess," |system: ",sysguess
+        c1=c1+1
+        print"|Points:--------\nhuman: ",c2," |system: ",c1
+    elif sysguess==[2] and guess==1:
+        print"------------------------>system\nhuman: ",guess," |system: ",sysguess
+        c1=c1+1
+        print"|Points:--------\nhuman: ",c2," |system: ",c1
+    elif sysguess==[2] and guess==3:
+        print"------------------------>human\nhuman: ",guess," |system: ",sysguess
+        c2=c2+1
+        print"|Points:--------\nhuman: ",c2," |system: ",c1
+    elif sysguess==[3] and guess==1:
+        print"------------------------>system\nhuman: ",guess," |system: ",sysguess
+        c1=c1+1
+        print"|Points:--------\nhuman: ",c2," |system: ",c1
+    elif sysguess==[3] and guess==2:
+        print"------------------------>system\nhuman: ",guess," |system: ",sysguess
+        c1=c1+1
+        print"|Points:--------\nhuman: ",c2," |system: ",c1
+    else:
+        print"------------>balance Try again-----\nhuman: ",guess," |system: ",sysguess
+        print"|Points:--------\nhuman: ",c2," |system: ",c1
+    if c2>=3:
+        print"------------\nHuman Win"
+        print"------------Result:   human: ",c2," |system: ",c1
+        break
+    if c1>=3:
+        print"------------\nSystem Win"
+        print"------------Result:   human: ",c2," |system: ",c1
+        break
+    print("-----------------------------\n\n\npaper: 1 , scissors: 2 , rock: 3")
+    guess=input("|>")
+    sysguess=random.sample(box,1)
+
+x=input()
+while x!="end":
+    x=input()
+
