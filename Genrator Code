@@ -1,0 +1,36 @@
+import random
+c1=raw_input("Genrate a Code > type 'Go'\nExit on Genration > Type 'Exit'\n>:")
+while True:
+    if c1=="Exit":
+        print ("Thank You See You later !!")
+        break
+    c3=raw_input(">Define Code type:\n |If need Numerical Code type Number\n |If need consist of alphabet type Alph\n |If neet number and Alphbets and Symbols Typ Com\n->:")
+    casenum="1234567890"
+    maxnum=len(casenum)
+    casealph="ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghijklmnopkrstuvwxyz"
+    maxalph=len(casealph)
+    casesym="!@#$%&"
+    caseall=casenum+casealph+casesym
+    maxall=len(caseall)
+    if c3=="Number":
+        print" > max Generation is ",maxnum
+    elif c3=="Alph":
+        print" > max Generation is ",maxalph
+    elif c3=="Com":
+        print" > max Generation is ",maxall
+    else:
+        print" > Zero Number"
+    c2=input("|Define Digits code number:\n             ")
+    if c3=="Number":
+        gen="".join(random.sample(casenum,c2))
+    elif c3=="Alph":
+        gen="".join(random.sample(casealph,c2))
+    elif c3=="Com":
+        gen="".join(random.sample(caseall,c2))
+    else:
+        gen="-non-"
+
+    if gen=="non":
+        print(">invalid inputs")
+    else:
+        print "YourCode: ",gen
